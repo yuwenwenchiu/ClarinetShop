@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     
     var totalPrice: Int = 0
+    
     var clQty: Int = 0
     var caseQty: Int = 0
     var collarQty: Int = 0
