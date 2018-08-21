@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //所有outlet
     @IBOutlet weak var clQtyLabel: UILabel!
     @IBOutlet weak var caseQtyLabel: UILabel!
     @IBOutlet weak var collarQtyLabel: UILabel!
@@ -17,16 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var rackQtyLabel: UILabel!
     @IBOutlet weak var clothQtyLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    
+    //宣告總金額初始值為0
     var totalPrice: Int = 0
-    
+    //選告所有品項數量初始值為0
     var clQty: Int = 0
     var caseQty: Int = 0
     var collarQty: Int = 0
     var bambooQty: Int = 0
     var rackQty: Int = 0
     var clothQty: Int = 0
-    
+    //Stepper動作：讀取＋-後的數量並傳值到total()
     @IBAction func clStepper(_ sender: UIStepper) {
         clQty = Int(sender.value)
         clQtyLabel.text = clQty.description
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         clothQtyLabel.text = clothQty.description
         total()
     }
-    
+    //收到所有品項數量後運算加總為總金額
     func total(){
         totalPrice = 32000*clQty + 2700*caseQty + 1050*collarQty +
         570*bambooQty + 550*rackQty + 480*clothQty
